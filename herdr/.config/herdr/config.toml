@@ -1,0 +1,128 @@
+onboarding = false
+
+[terminal]
+default_shell = ""
+shell_mode = "auto"
+new_cwd = "follow"
+
+[update]
+version_check = false
+manifest_check = false
+
+[keys]
+prefix = "ctrl+a"
+help = "prefix+?"
+settings = "prefix+s"
+detach = "prefix+d"
+reload_config = "prefix+shift+r"
+workspace_picker = "prefix+g"
+goto = "prefix+e"
+new_workspace = "prefix+shift+c"
+open_worktree = ""
+remove_worktree = ""
+rename_workspace = "prefix+shift+w"
+close_workspace = "prefix+shift+d"
+previous_workspace = "prefix+shift+p"
+next_workspace = "prefix+shift+n"
+remote_image_paste = "ctrl+v"
+new_tab = "prefix+c"
+rename_tab = "prefix+comma"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+switch_tab = "prefix+1..9"
+close_tab = "prefix+shift+x"
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+split_vertical = "prefix+|"
+split_horizontal = "prefix+minus"
+zoom = "prefix+o"
+toggle_sidebar = "prefix+space"
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+
+[[keys.command]]
+key = "prefix+shift+g"
+type = "popup"
+command = "lazygit"
+width = "85%"
+height = "85%"
+
+[[keys.command]]
+key = "ctrl+h"
+command = "herdr-navigator left --key ctrl+h"
+[[keys.command]]
+key = "ctrl+l"
+command = "herdr-navigator right --key ctrl+l"
+[[keys.command]]
+key = "ctrl+k"
+command = "herdr-navigator up --key ctrl+k"
+[[keys.command]]
+key = "ctrl+j"
+command = "herdr-navigator down --key ctrl+j"
+
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "sessionizer.open"
+
+[keys.indexed]
+tabs = ""
+workspaces = ""
+agents = ""
+
+[worktrees]
+directory = "~/.herdr/worktrees"
+
+[ui]
+sidebar_collapsed_mode = "hidden"
+mouse_capture = true
+copy_on_select = true
+host_cursor = "auto"
+right_click_passthrough_modifier = ""
+redraw_on_focus_gained = true
+mouse_scroll_lines = 5
+confirm_close = true
+prompt_new_tab_name = false
+pane_borders = true
+pane_gaps = true
+show_agent_labels_on_pane_borders = true
+hide_tab_bar_when_single_tab = true
+agent_panel_sort = "spaces"
+
+[ui.sidebar.agents]
+row_gap = 0
+rows = [["state_icon", "workspace", "tab"], ["agent"]]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [["state_icon", "workspace"], ["branch", "git_status"]]
+
+[ui.toast]
+# off / herdr / terminal / system
+delivery = "herdr"
+delay_seconds = 1
+
+[ui.toast.herdr]
+position = "bottom-right"
+
+[ui.toast.clipboard]
+enabled = true
+position = "bottom-center"
+
+[ui.sound]
+enabled = true
+
+[session]
+resume_agents_on_restore = true
+
+[remote]
+manage_ssh_config = false
+
+[experimental]
+allow_nested = false
+kitty_graphics = false
+pane_history = false
+# block / steady_block / underline / steady_underline / bar / steady_bar
+cjk_ime_cursor_shape = "steady_block"

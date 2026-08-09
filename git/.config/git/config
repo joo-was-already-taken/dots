@@ -1,0 +1,9 @@
+[alias]
+  a = add
+  st = status
+  d = diff
+  ds = diff --staged
+  ci = commit -v
+  ch = checkout
+  br = branch
+  last = log -1 HEAD
