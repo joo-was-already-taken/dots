@@ -22,9 +22,11 @@ modules << {
       source: "https://github.com/joo-was-already-taken/herdr-navigator.nvim"
     brew "bun"
     brew "fzf"
+    brew "cargo"
   BREW
   postinstall: -> {
     sh! "herdr plugin install andrewchng/herdr-sessionizer --yes"
+    sh! "herdr plugin install joo-was-already-taken/herdr-prevtab --yes"
   },
 }
 

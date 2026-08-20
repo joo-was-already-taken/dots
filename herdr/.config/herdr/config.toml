@@ -63,6 +63,11 @@ key = "ctrl+j"
 command = "herdr-navigator down --key ctrl+j"
 
 [[keys.command]]
+key = "prefix+b"
+type = "plugin_action"
+command = "prevtab.jump_back"
+
+[[keys.command]]
 key = "prefix+f"
 type = "plugin_action"
 command = "sessionizer.open"
