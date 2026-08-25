@@ -41,6 +41,7 @@ zoom = "prefix+o"
 toggle_sidebar = "prefix+space"
 navigate_workspace_up = "k"
 navigate_workspace_down = "j"
+open_notification_target = "prefix+:"
 
 [[keys.command]]
 key = "prefix+shift+g"
