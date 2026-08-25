@@ -69,6 +69,11 @@ type = "plugin_action"
 command = "prevtab.jump_back"
 
 [[keys.command]]
+key = "prefix+shift+b"
+type = "plugin_action"
+command = "prevtab.workspace_jump_back"
+
+[[keys.command]]
 key = "prefix+f"
 type = "plugin_action"
 command = "sessionizer.open"
