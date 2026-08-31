@@ -27,6 +27,7 @@ modules << {
   postinstall: -> {
     sh! "herdr plugin install andrewchng/herdr-sessionizer --yes"
     sh! "herdr plugin install joo-was-already-taken/herdr-prevtab --yes"
+    sh! "herdr plugin install speardragon/herdr-plugin-manager --yes"
   },
 }
 

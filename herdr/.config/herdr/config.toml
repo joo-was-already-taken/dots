@@ -78,6 +78,11 @@ key = "prefix+f"
 type = "plugin_action"
 command = "sessionizer.open"
 
+[[keys.command]]
+key = "prefix+ctrl+p"
+type = "plugin_action"
+command = "ray.plugin-manager.open"
+
 [keys.indexed]
 tabs = ""
 workspaces = ""
