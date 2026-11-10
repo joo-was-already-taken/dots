@@ -35,10 +35,11 @@ modules << {
   name: "neovim",
   brewfile: %(brew "neovim"\n) + File.read(File.join(__dir__, "neovim/.config/nvim/Brewfile")),
   postinstall: -> {
-    sh! <<~SH
-      git clone --depth=1 https://github.com/savq/paq-nvim.git \
-        "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim || true
-    SH
+    data_home = ENV.fetch("XDG_DATA_HOME", File.join(Dir.home, ".local/share"))
+    paq_dir = File.join(data_home, "nvim/site/pack/paqs/start/paq-nvim")
+    next if File.directory?(paq_dir)
+
+    sh! "git clone --depth=1 https://github.com/savq/paq-nvim.git '#{paq_dir}'"
   },
 }
 
